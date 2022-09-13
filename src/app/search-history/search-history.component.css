@@ -1,0 +1,23 @@
+/* search results styles*/
+.search-history-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.wrapper{
+    display: inline-flex;
+}
+
+.clear-button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1em;
+}
+
+fa-icon:hover{
+    color: red;
+    cursor:pointer;
+}

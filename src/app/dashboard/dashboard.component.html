@@ -1,0 +1,53 @@
+<!--logo-->
+<div class="logo-container">
+    <div class="logo">
+        <img class="logo-image logo1" src="\assets\images\full-logo.png" alt="logo">
+        <img class="logo2" src="\assets\images\logo.png" alt="logo-small">
+    </div>
+</div>
+
+
+<!--search bar -->
+
+<div class="input-container">
+    <input type="text" #postcode placeholder="Search postcode"
+        (keydown.enter)="getLocationDetails(postcode.value);postcode.value=''">
+    <button class="search-button" (click)="getLocationDetails(postcode.value);
+             postcode.value=''">
+        <fa-icon class="fa-icon" [icon]="searchIcon"></fa-icon>
+    </button>
+</div>
+
+
+<!--search results-->
+<div *ngIf="locations" class="search-results-container">
+    <div class="col1">
+        <span>Postcode</span>
+        <p>{{locations.postcode}}</p>
+        <br>
+        <span>Region</span>
+        <p>{{locations.region}}</p>
+        <br>
+        <span>Latitude</span>
+        <p>{{locations.latitude}}</p>
+    </div>
+
+    <div class="col2">
+        <span>Country</span>
+        <p>{{locations.country}}</p>
+        <br>
+        <span>District</span>
+        <p>{{locations.admin_district}}</p>
+        <br>
+        <span>Longitude</span>
+        <p>{{locations.longitude}}</p>
+    </div>
+</div>
+<div class="distance-container" *ngIf="locations">
+    <span>Distance to Heathrow -> </span>
+    <p *ngIf="!distanceInKm; else showThis">{{kmToAirport}} Km</p>
+    <ng-template #showThis>
+        <p>{{milesToAirport}} Mi</p>
+    </ng-template>
+    <button class="switch-button" type="button" (click)="switchMetrics()">{{distanceInKm?'Km':'Mi'}}</button>
+</div>

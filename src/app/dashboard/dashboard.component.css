@@ -1,0 +1,138 @@
+/* logo styles */
+
+.logo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo{
+    padding-top: 6em;
+}
+
+/* search bar styles*/
+.input-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-icon{
+    font-size: 1.7em;
+}
+
+.search-button{
+    background: transparent;
+    outline: none;
+    border: none;
+    margin-left: 0.5em;
+}
+
+.search-button:hover{
+    cursor: pointer;
+}
+
+input{
+    border-radius: 50px;
+    box-shadow: 0 1px 3px rgb(192, 185, 185);
+    border: none;
+    padding: 0.5em;
+    margin: 1em;
+    border:1px solid #eaeaea;
+    outline:none;
+    max-width: 400px;
+    text-align: center;
+}
+
+input::placeholder{
+    text-align: center;
+    opacity: 0.3;
+    color: grey;
+}
+
+input:focus{
+    border: 1px solid rgb(197, 197, 197);
+}
+
+.search-button:hover{
+    transform: scale(1.4);
+}
+
+/* search results styles*/
+.search-results-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap:5em;
+    margin-top:2em;
+}
+
+span{
+    font-weight: bold;
+}
+
+.col1, .col2{
+    text-align: center;
+}
+
+.col1 p , .col2 p{
+    margin-top: 5%;
+}
+.distance-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.distance-container p{
+    margin-left: 1em;
+}
+
+
+.switch-button{
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgb(192, 185, 185);
+    border: none;
+    padding: 0.2rem 0.7rem;
+    margin: 1em;
+    border:1px solid #eaeaea;
+    outline:none;
+    text-align: center;
+}
+
+.switch-button:hover{
+    box-shadow: 0 1px 3px #1c2938;
+    border-color: #1c2938;
+    background-color: #1c2938;
+    color: white;
+    cursor: pointer;
+}
+
+
+@media screen and (min-width: 768px){
+    input{
+        flex-grow: 1;
+    }
+}
+
+.logo2{
+    display:none;
+}
+
+@media screen and (max-width: 768px){
+    .logo1{
+        display:none
+    }
+
+    .logo2{
+        display:block;
+    }
+
+}
+
+
+
+
+

@@ -1,0 +1,13 @@
+<div class="search-history-container">
+    <div class="search-history" *ngIf="SearchHistoryService.searches.length > 0">
+        <div class="wrapper">
+            <h4>Recent Searches</h4>
+            <div class="clear-button-container">
+                <fa-icon (click)="SearchHistoryService.clear()" class="fa-icon" [icon]="xicon"></fa-icon>
+            </div>
+        </div>
+        <div *ngFor="let local of SearchHistoryService.searches; let i = index">
+            <p>{{i+1}}: {{local}}</p>
+        </div>
+    </div>
+</div>
