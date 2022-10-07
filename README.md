@@ -1,5 +1,7 @@
 # LocationAppFinal
 
+Front-end application that finds a UK address via a postal code, using the postcodes.io API.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.1.
 
 ## Development server
